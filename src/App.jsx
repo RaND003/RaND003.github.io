@@ -113,7 +113,9 @@ export default function App() {
     }
   ];
 
-  const handleSearch = () => {
+  const isMobile = window.innerWidth <= 768;
+
+const handleSearch = () => {
   const user = users.find(
     (u) => u.name.trim() === search.trim()
   );
@@ -130,7 +132,6 @@ export default function App() {
   
   if (foundUser) {
     return (
-      
       <div
         style={{
           minHeight: "100vh",
@@ -142,67 +143,70 @@ export default function App() {
           direction: "rtl",
           position: "relative",
           overflow: "hidden"
-  }}
->
-  {/* RIGHT SIDE IMAGE */}
-  <img
-    src={foundUser.photo}
-    alt="user"
-    style={{
-      position: "absolute",
-      right: "-100px",
-      bottom: "0",
-      height: "90%",
-      opacity: "0.9",
-      zIndex: 1
-    }}
-  />
+        }}
+      >
+        {/* RIGHT SIDE IMAGE */}
+        <img
+          src={foundUser.photo}
+          alt="user"
+          style={{
+            position: "absolute",
+            right: isMobile ? "-80px" : "-100px",
+            bottom: "0",
+            height: isMobile ? "80%" : "90%",
+            opacity: "0.9",
+            zIndex: 1
+          }}
+        />
 
-  {/* TOP LEFT IMAGE */}
-<img
-  src={foundUser.secondImage}
-  alt="decoration"
-  style={{
-    position: "absolute",
-    top: "20px",
-    left: "20px",
-    width: "120px",
-    zIndex: 1
-  }}
- 
-/>
- {/* let image */}
-  <img
-  src={foundUser.thirdImage}
-  alt="decoration"
-  style={{
-    position: "absolute",
-    bottom: "-70px",
-    left: "-100px",
-    width: "35%",
-    opacity: "0.2",
-    zIndex: 1
-  }}
-  />
-  {/* CARD */}
-  <div
-  style={{
-    position: "relative",
-    background: foundUser.cardBg,
-    padding: "50px",
-    borderRadius: foundUser.borderRadius,
-    width: "90%",
-    maxWidth: "500px",
-    textAlign: "center",
-    zIndex: 2,
-    border: `3px solid ${foundUser.borderColor}`,
-    boxShadow: foundUser.shadow,
-    color: foundUser.textColor
-  }}
->
-  <h2>{foundUser.message}</h2>
-</div>
-</div>
+        {/* TOP LEFT IMAGE */}
+        <img
+          src={foundUser.secondImage}
+          alt="decoration"
+          style={{
+            position: "absolute",
+            top: "20px",
+            left: "20px",
+            width: isMobile ? "80px" : "120px",
+            zIndex: 1
+          }}
+        />
+
+        {/* LEFT IMAGE */}
+        <img
+          src={foundUser.thirdImage}
+          alt="decoration"
+          style={{
+            position: "absolute",
+            bottom: isMobile ? "-50px" : "-70px",
+            left: isMobile ? "-80px" : "-100px",
+            width: isMobile ? "45%" : "35%",
+            opacity: "0.2",
+            zIndex: 1
+          }}
+        />
+
+        {/* CARD */}
+        <div
+          style={{
+            position: "relative",
+            background: foundUser.cardBg,
+            padding: isMobile ? "30px" : "50px",
+            borderRadius: foundUser.borderRadius,
+            width: isMobile ? "85%" : "90%",
+            maxWidth: "500px",
+            textAlign: "center",
+            zIndex: 2,
+            border: `3px solid ${foundUser.borderColor}`,
+            boxShadow: foundUser.shadow,
+            color: foundUser.textColor
+          }}
+        >
+          <h2 style={{ fontSize: isMobile ? "1.5em" : "2em" }}>
+            {foundUser.message}
+          </h2>
+        </div>
+      </div>
     );
   }
 
@@ -212,25 +216,28 @@ export default function App() {
         minHeight: "100vh",
         backgroundColor: "#ea8383",
         backgroundImage: "url('/start.png')",
-        backgroundPosition:"right bottom",
+        backgroundPosition: "right bottom",
         backgroundRepeat: "no-repeat",
+        backgroundSize: isMobile ? "cover" : "auto",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         direction: "rtl",
-        
+        padding: isMobile ? "1rem" : "0",
       }}
-     
     >
-      <h1>عيدكم مبارك! </h1>
+      <h1 style={{ fontSize: isMobile ? "1.8em" : "2.5em", marginBottom: "1rem" }}>
+        عيدكم مبارك!
+      </h1>
+
       <input
         type="text"
         placeholder="اكتب اسمك الذي تنعتك به المهنئة "
         value={search}
         onChange={(e) => {
-        setSearch(e.target.value);
-        setNotFound(false);
+          setSearch(e.target.value);
+          setNotFound(false);
         }}
         style={{
           padding: "10px",
@@ -240,11 +247,12 @@ export default function App() {
           backgroundColor: "#ffffff",
           border: "1px solid #ccc",
           borderRadius: "5px",
-          width: "250px",
-          //textAlign: "center"
+          width: isMobile ? "85%" : "250px",
+          maxWidth: "250px",
+          boxSizing: "border-box"
         }}
-        //className="searchInput"
       />
+
       <button
         onClick={handleSearch}
         style={{
@@ -252,29 +260,37 @@ export default function App() {
           padding: "10px 20px",
           cursor: "pointer",
           backgroundColor: "#d44c4c",
+          fontSize: isMobile ? "14px" : "16px"
         }}
       >
         بحث
       </button>
+
       {notFound && (
-        <p style={{ color: "#b91c1c",
+        <p
+          style={{
+            color: "#b91c1c",
             background: "#fee2e2",
             padding: "10px 15px",
-            borderRadius: "10px" }}>
-              متأكد من اسمك؟ حاول مرة أخرى 
+            borderRadius: "10px",
+            margin: "15px",
+            fontSize: isMobile ? "14px" : "16px"
+          }}
+        >
+          متأكد من اسمك؟ حاول مرة أخرى
         </p>
       )}
+
       <img
         src="/start3.png"
         alt="decoration"
         style={{
-        position: "absolute",
-        top: "20px",
-        left: "20px",
-        width: "120px"
-      }}
+          position: "absolute",
+          top: "20px",
+          left: "20px",
+          width: isMobile ? "80px" : "120px"
+        }}
       />
-      
     </div>
   );
 }
