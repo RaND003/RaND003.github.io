@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useState, useEffect } from 'react';
 import "./App.css";
 export default function App() {
   const [search, setSearch] = useState("");
@@ -113,23 +114,31 @@ export default function App() {
     }
   ];
 
-  const isMobile = window.innerWidth <= 768;
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-const handleSearch = () => {
-  const user = users.find(
-    (u) => u.name.trim() === search.trim()
-  );
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
 
-  if (user) {
-    setFoundUser(user);
-    setNotFound(false);
-  } else {
-    setFoundUser(null);
-    setNotFound(true);
-  }
-};
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-  
+  const handleSearch = () => {
+    const user = users.find(
+      (u) => u.name.trim() === search.trim()
+    );
+
+    if (user) {
+      setFoundUser(user);
+      setNotFound(false);
+    } else {
+      setFoundUser(null);
+      setNotFound(true);
+    }
+  };
+
   if (foundUser) {
     return (
       <div
@@ -138,7 +147,7 @@ const handleSearch = () => {
           width: "100%",
           backgroundColor: foundUser.bg,
           display: "flex",
-          justifyContent: "center",
+          justifyContent: isMobile ? "flex-start" : "center",
           alignItems: "center",
           direction: "rtl",
           position: "relative",
@@ -151,11 +160,12 @@ const handleSearch = () => {
           alt="user"
           style={{
             position: "absolute",
-            right: isMobile ? "-60px" : "-100px",
+            right: isMobile ? "0" : "-100px",
             bottom: "0",
-            height: isMobile ? "70%" : "90%",
+            height: isMobile ? "100%" : "90%",
             opacity: "0.9",
-            zIndex: 1
+            zIndex: 1,
+            objectFit: "cover"
           }}
         />
 
@@ -191,20 +201,22 @@ const handleSearch = () => {
           style={{
             position: "relative",
             background: foundUser.cardBg,
-            padding: isMobile ? "20px 25px" : "50px",
+            padding: isMobile ? "20px 25px" : "40px",
             borderRadius: foundUser.borderRadius,
-            width: isMobile ? "90%" : "90%",
-            maxWidth: isMobile ? "100%" : "500px",
+            width: isMobile ? "70%" : "500px",
+            maxWidth: isMobile ? "70%" : "500px",
             textAlign: "center",
             zIndex: 2,
             border: `3px solid ${foundUser.borderColor}`,
             boxShadow: foundUser.shadow,
             color: foundUser.textColor,
             overflowY: "auto",
-            maxHeight: isMobile ? "70vh" : "auto"
+            maxHeight: isMobile ? "65vh" : "80vh",
+            marginLeft: isMobile ? "auto" : "0",
+            marginRight: isMobile ? "0" : "auto"
           }}
         >
-          <h2 style={{ fontSize: isMobile ? "1.2em" : "2em", margin: "0" }}>
+          <h2 style={{ fontSize: isMobile ? "1.1em" : "1.8em", margin: "0", lineHeight: "1.6" }}>
             {foundUser.message}
           </h2>
         </div>
