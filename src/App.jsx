@@ -151,9 +151,9 @@ const handleSearch = () => {
           alt="user"
           style={{
             position: "absolute",
-            right: isMobile ? "-80px" : "-100px",
+            right: isMobile ? "-60px" : "-100px",
             bottom: "0",
-            height: isMobile ? "80%" : "90%",
+            height: isMobile ? "70%" : "90%",
             opacity: "0.9",
             zIndex: 1
           }}
@@ -165,9 +165,9 @@ const handleSearch = () => {
           alt="decoration"
           style={{
             position: "absolute",
-            top: "20px",
-            left: "20px",
-            width: isMobile ? "80px" : "120px",
+            top: isMobile ? "10px" : "20px",
+            left: "10px",
+            width: isMobile ? "60px" : "120px",
             zIndex: 1
           }}
         />
@@ -178,9 +178,9 @@ const handleSearch = () => {
           alt="decoration"
           style={{
             position: "absolute",
-            bottom: isMobile ? "-50px" : "-70px",
-            left: isMobile ? "-80px" : "-100px",
-            width: isMobile ? "45%" : "35%",
+            bottom: isMobile ? "-30px" : "-70px",
+            left: isMobile ? "-60px" : "-100px",
+            width: isMobile ? "40%" : "35%",
             opacity: "0.2",
             zIndex: 1
           }}
@@ -191,18 +191,20 @@ const handleSearch = () => {
           style={{
             position: "relative",
             background: foundUser.cardBg,
-            padding: isMobile ? "30px" : "50px",
+            padding: isMobile ? "20px 25px" : "50px",
             borderRadius: foundUser.borderRadius,
-            width: isMobile ? "85%" : "90%",
-            maxWidth: "500px",
+            width: isMobile ? "90%" : "90%",
+            maxWidth: isMobile ? "100%" : "500px",
             textAlign: "center",
             zIndex: 2,
             border: `3px solid ${foundUser.borderColor}`,
             boxShadow: foundUser.shadow,
-            color: foundUser.textColor
+            color: foundUser.textColor,
+            overflowY: "auto",
+            maxHeight: isMobile ? "70vh" : "auto"
           }}
         >
-          <h2 style={{ fontSize: isMobile ? "1.5em" : "2em" }}>
+          <h2 style={{ fontSize: isMobile ? "1.2em" : "2em", margin: "0" }}>
             {foundUser.message}
           </h2>
         </div>
@@ -218,16 +220,21 @@ const handleSearch = () => {
         backgroundImage: "url('/start.png')",
         backgroundPosition: "right bottom",
         backgroundRepeat: "no-repeat",
-        backgroundSize: isMobile ? "cover" : "auto",
+        backgroundSize: isMobile ? "contain" : "auto",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         direction: "rtl",
         padding: isMobile ? "1rem" : "0",
+        gap: isMobile ? "1rem" : "0"
       }}
     >
-      <h1 style={{ fontSize: isMobile ? "1.8em" : "2.5em", marginBottom: "1rem" }}>
+      <h1 style={{ 
+        fontSize: isMobile ? "1.5em" : "2.5em", 
+        margin: isMobile ? "0" : "0",
+        textShadow: "2px 2px 4px rgba(0,0,0,0.1)"
+      }}>
         عيدكم مبارك!
       </h1>
 
@@ -242,12 +249,11 @@ const handleSearch = () => {
         style={{
           padding: "10px",
           fontSize: "16px",
-          marginTop: "10px",
           color: "#333",
           backgroundColor: "#ffffff",
           border: "1px solid #ccc",
           borderRadius: "5px",
-          width: isMobile ? "85%" : "250px",
+          width: isMobile ? "100%" : "250px",
           maxWidth: "250px",
           boxSizing: "border-box"
         }}
@@ -256,11 +262,13 @@ const handleSearch = () => {
       <button
         onClick={handleSearch}
         style={{
-          marginTop: "15px",
           padding: "10px 20px",
           cursor: "pointer",
           backgroundColor: "#d44c4c",
-          fontSize: isMobile ? "14px" : "16px"
+          fontSize: isMobile ? "14px" : "16px",
+          color: "white",
+          border: "none",
+          borderRadius: "5px"
         }}
       >
         بحث
@@ -273,8 +281,9 @@ const handleSearch = () => {
             background: "#fee2e2",
             padding: "10px 15px",
             borderRadius: "10px",
-            margin: "15px",
-            fontSize: isMobile ? "14px" : "16px"
+            margin: "10px",
+            fontSize: isMobile ? "13px" : "16px",
+            maxWidth: "90%"
           }}
         >
           متأكد من اسمك؟ حاول مرة أخرى
@@ -286,9 +295,9 @@ const handleSearch = () => {
         alt="decoration"
         style={{
           position: "absolute",
-          top: "20px",
-          left: "20px",
-          width: isMobile ? "80px" : "120px"
+          top: "10px",
+          left: "10px",
+          width: isMobile ? "70px" : "120px"
         }}
       />
     </div>
