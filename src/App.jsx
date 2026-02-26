@@ -113,6 +113,8 @@ export default function App() {
     }
   ];
 
+  const isMobile = window.innerWidth <= 768;
+
 const handleSearch = () => {
   const user = users.find(
     (u) => u.name.trim() === search.trim()
@@ -130,7 +132,6 @@ const handleSearch = () => {
   
   if (foundUser) {
     return (
-      
       <div
         style={{
           minHeight: "100vh",
@@ -142,67 +143,72 @@ const handleSearch = () => {
           direction: "rtl",
           position: "relative",
           overflow: "hidden"
-  }}
->
-  {/* RIGHT SIDE IMAGE */}
-  <img
-    src={foundUser.photo}
-    alt="user"
-    style={{
-      position: "absolute",
-      right: "-100px",
-      bottom: "0",
-      height: "90%",
-      opacity: "0.9",
-      zIndex: 1
-    }}
-  />
+        }}
+      >
+        {/* RIGHT SIDE IMAGE */}
+        <img
+          src={foundUser.photo}
+          alt="user"
+          style={{
+            position: "absolute",
+            right: isMobile ? "-60px" : "-100px",
+            bottom: "0",
+            height: isMobile ? "70%" : "90%",
+            opacity: "0.9",
+            zIndex: 1
+          }}
+        />
 
-  {/* TOP LEFT IMAGE */}
-<img
-  src={foundUser.secondImage}
-  alt="decoration"
-  style={{
-    position: "absolute",
-    top: "20px",
-    left: "20px",
-    width: "120px",
-    zIndex: 1
-  }}
- 
-/>
- {/* let image */}
-  <img
-  src={foundUser.thirdImage}
-  alt="decoration"
-  style={{
-    position: "absolute",
-    bottom: "-70px",
-    left: "-100px",
-    width: "35%",
-    opacity: "0.2",
-    zIndex: 1
-  }}
-  />
-  {/* CARD */}
-  <div
-  style={{
-    position: "relative",
-    background: foundUser.cardBg,
-    padding: "50px",
-    borderRadius: foundUser.borderRadius,
-    width: "90%",
-    maxWidth: "500px",
-    textAlign: "center",
-    zIndex: 2,
-    border: `3px solid ${foundUser.borderColor}`,
-    boxShadow: foundUser.shadow,
-    color: foundUser.textColor
-  }}
->
-  <h2>{foundUser.message}</h2>
-</div>
-</div>
+        {/* TOP LEFT IMAGE */}
+        <img
+          src={foundUser.secondImage}
+          alt="decoration"
+          style={{
+            position: "absolute",
+            top: isMobile ? "10px" : "20px",
+            left: "10px",
+            width: isMobile ? "60px" : "120px",
+            zIndex: 1
+          }}
+        />
+
+        {/* LEFT IMAGE */}
+        <img
+          src={foundUser.thirdImage}
+          alt="decoration"
+          style={{
+            position: "absolute",
+            bottom: isMobile ? "-30px" : "-70px",
+            left: isMobile ? "-60px" : "-100px",
+            width: isMobile ? "40%" : "35%",
+            opacity: "0.2",
+            zIndex: 1
+          }}
+        />
+
+        {/* CARD */}
+        <div
+          style={{
+            position: "relative",
+            background: foundUser.cardBg,
+            padding: isMobile ? "20px 25px" : "50px",
+            borderRadius: foundUser.borderRadius,
+            width: isMobile ? "90%" : "90%",
+            maxWidth: isMobile ? "100%" : "500px",
+            textAlign: "center",
+            zIndex: 2,
+            border: `3px solid ${foundUser.borderColor}`,
+            boxShadow: foundUser.shadow,
+            color: foundUser.textColor,
+            overflowY: "auto",
+            maxHeight: isMobile ? "70vh" : "auto"
+          }}
+        >
+          <h2 style={{ fontSize: isMobile ? "1.2em" : "2em", margin: "0" }}>
+            {foundUser.message}
+          </h2>
+        </div>
+      </div>
     );
   }
 
@@ -212,69 +218,88 @@ const handleSearch = () => {
         minHeight: "100vh",
         backgroundColor: "#ea8383",
         backgroundImage: "url('/start.png')",
-        backgroundPosition:"right bottom",
+        backgroundPosition: "right bottom",
         backgroundRepeat: "no-repeat",
+        backgroundSize: isMobile ? "contain" : "auto",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         direction: "rtl",
-        
+        padding: isMobile ? "1rem" : "0",
+        gap: isMobile ? "1rem" : "0"
       }}
-     
     >
-      <h1>عيدكم مبارك! </h1>
+      <h1 style={{ 
+        fontSize: isMobile ? "1.5em" : "2.5em", 
+        margin: isMobile ? "0" : "0",
+        textShadow: "2px 2px 4px rgba(0,0,0,0.1)"
+      }}>
+        عيدكم مبارك!
+      </h1>
+
       <input
         type="text"
         placeholder="اكتب اسمك الذي تنعتك به المهنئة "
         value={search}
         onChange={(e) => {
-        setSearch(e.target.value);
-        setNotFound(false);
+          setSearch(e.target.value);
+          setNotFound(false);
         }}
         style={{
           padding: "10px",
           fontSize: "16px",
-          marginTop: "10px",
           color: "#333",
           backgroundColor: "#ffffff",
           border: "1px solid #ccc",
           borderRadius: "5px",
-          width: "250px",
-          //textAlign: "center"
+          width: isMobile ? "100%" : "250px",
+          maxWidth: "250px",
+          boxSizing: "border-box"
         }}
-        //className="searchInput"
       />
+
       <button
         onClick={handleSearch}
         style={{
-          marginTop: "15px",
           padding: "10px 20px",
           cursor: "pointer",
           backgroundColor: "#d44c4c",
+          fontSize: isMobile ? "14px" : "16px",
+          color: "white",
+          border: "none",
+          borderRadius: "5px"
         }}
       >
         بحث
       </button>
+
       {notFound && (
-        <p style={{ color: "#b91c1c",
+        <p
+          style={{
+            color: "#b91c1c",
             background: "#fee2e2",
             padding: "10px 15px",
-            borderRadius: "10px" }}>
-              متأكد من اسمك؟ حاول مرة أخرى 
+            borderRadius: "10px",
+            margin: "10px",
+            fontSize: isMobile ? "13px" : "16px",
+            maxWidth: "90%"
+          }}
+        >
+          متأكد من اسمك؟ حاول مرة أخرى
         </p>
       )}
+
       <img
         src="/start3.png"
         alt="decoration"
         style={{
-        position: "absolute",
-        top: "20px",
-        left: "20px",
-        width: "120px"
-      }}
+          position: "absolute",
+          top: "10px",
+          left: "10px",
+          width: isMobile ? "70px" : "120px"
+        }}
       />
-      
     </div>
   );
 }
