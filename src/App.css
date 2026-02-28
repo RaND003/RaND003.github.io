@@ -187,10 +187,10 @@ h1 {
 .user-photo {
   position: absolute;
   right: 0;
-  bottom: 110px;
+  bottom: 100px;
   height: auto;
   width: 23ch;
-  max-width: 100%;
+  max-width: 110%;
   opacity: 0.9;
   z-index: 1;
   object-fit: cover;
