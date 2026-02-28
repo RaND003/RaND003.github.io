@@ -8,18 +8,109 @@ export default function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const users = [
-    {
+   {
       name: "ميس",
-      message: "لوفي حبي ",
+      message: "ميسوو، عيدك مبارك يا جميلة ، بتنمالك كل التوفيق بحياتك وبإني أكون صاحبة ممكن تساعدك زي ما دايماً بتساعديني، بحبك كثير كثير كثير، استمتعي بيومكヾ(＠⌒ー⌒＠)ノ",
       photo: "/star.png",
       secondImage: "/lib.png",
       thirdImage: "/arr4.png",
       bg: "#6185E0",
+
       cardBg: "#ffffff",
       textColor: "#2c3e50",
       borderColor: "#b8d3ee",
       borderRadius: "20px",
-      fontFamily: "arial, sans-serif",
+      fontFamily:"arial, sans-serif",
+      shadow: "0 10px 30px rgba(0,0,0,0.2)"
+    },
+    {
+      name: "بتول",
+      message: " حبي بتول، عسولتي الي ممكن أحكي معها عن أي إشي عشوائي، ممتنة إلك بشكل ما تتخيليه، بحبك كثير كثير، وفخورة وأنا أشوفك بتكبري و تتغيري للأحسن، الله يسعدك ويوفقك وييسر أمرك ويرضيك، عيدكك مبارككك استمتعي بيومك بسوريا (❤️ ω ❤️)",
+      photo: "/batool.png",
+      secondImage: "/batool5.png",
+      thirdImage: "/arr4.png",
+      bg: "#C080C0",
+
+      cardBg: "#ffffff",
+      textColor: "#38192e",
+      borderColor: "#d7bad0",
+      borderRadius: "20px",
+      fontFamily:"arial, sans-serif",
+      shadow: "0 10px 30px rgba(0,0,0,0.2)"
+    },
+    {
+      name: "دمدم",
+      message: "دمدوميي، عيدكك مبارك حبيي، جداً ممتنة لوجودك معي طول هالسنين، وبحب كيف متى ما حكينا مع بعض الوضع مريح، وجودك الطبيعي واشي بخاف ألاقيني معتادته، الله يسعدك وييسرلك أمرك ويرضيك، وبحبك كثير كثير كثير، استمتعي بيومك ㄟ(≧◇≦)ㄏ    ",
+      photo: "/gala.png",
+      secondImage: "/gala2.png",
+      thirdImage: "/arr4.png",
+      bg: "#8B0000",
+
+      cardBg: "#ffffff",
+      textColor: "#502e2c",
+      borderColor: "#f5d8d7",
+      borderRadius: "20px",
+      fontFamily:"arial, sans-serif",
+      shadow: "0 10px 30px rgba(0,0,0,0.2)"
+    },
+     {
+      name: "زي",
+      message:"زيي، عسولتي الي اشتقتلها كثير، بحب أمشي بحسابك الثاني وبحب مخك بحس لازم أحكي معك أكثر، الله يسعدك ويوفقك، عيدكك مباركك استمتعي بيومك （〃｀ 3′〃）",
+      photo: "/shua.png",
+      secondImage: "/ball.png",
+      thirdImage: "/arr4.png",
+      bg: "#C080C0",
+
+      cardBg: "#ffffff",
+      textColor: "#620260",
+      borderColor: "#f0c8f7",
+      borderRadius: "20px",
+      fontFamily:"arial, sans-serif",
+      shadow: "0 10px 30px rgba(0,0,0,0.2)"
+    },
+     {
+      name: "ري",
+      message:"ريرييي عيدك مباركك يا جميل، بحبك كثير كثير، وبحب الحكي معك والتشابهات الي دايما بنلقطها وبنضحك عليها، وتحملك لي كل يوم اثنين بعد دوامي اشي ما رح أنساه وجداً ممتنة له، وجودك سبب من أسباب رجعتي للحساب، الله يسعدك ويرضيك ويوفقك، استمتعي بيومك لوف يوو (✿◠‿◠)",
+      photo: "/dokyeom.png",
+      secondImage: "/pinkflower.png",
+      thirdImage: "/arr4.png",
+      bg: "#ADD8E6",
+
+      cardBg: "#ffffff",
+      textColor: "#2c3e50",
+      borderColor: "#c0d4ea",
+      borderRadius: "20px",
+      fontFamily:"arial, sans-serif",
+      shadow: "0 10px 30px rgba(0,0,0,0.2)"
+    },
+     {
+      name: "رينا",
+      message:"رينو، اعتراف سريع كنت بشيل أي حدا بعملي فولو عبين ما عملتي انتي وتفنقرت إن وحدة من حساباتي المفضلة ما بقدر اشيلها، المهمم بحبك كثير كثيرر، الله يوفقك ويسعدك دايما، عيدكك مباركك واستمتعي بيومكك (〜￣▽￣)〜",
+      photo: "/kwan2.png",
+      secondImage: "/sat.png",
+      thirdImage: "/arr4.png",
+      bg: "#E0FFFF",
+
+      cardBg: "#ffffff",
+      textColor: "#052349",
+      borderColor: "#d8d9ee",
+      borderRadius: "20px",
+      fontFamily:"arial, sans-serif",
+      shadow: "0 10px 30px rgba(0,0,0,0.2)"
+    },
+     {
+      name: "ايسا",
+      message:"ايسا يا ايسا، ألطف وأعسل بنت بالكوكب، حاسة رح أخوفك بكمية الحب الي درميها عليك، بس جد الايدول تبعي (≧∀≦)ゞ ، جملة الكل يبدو أقبح عن قرب بتنطبقش عليك، كل ما أحكي معك أكثر بحبك زيادة، الله يريح بالك ويسعدك، عيدكك مبارك حبي ฅʕ•̫͡•ʔฅ",
+      photo: "/vernon.png",
+      secondImage: "/draw4.png",
+      thirdImage: "/arr4.png",
+      bg: "#B37557",
+
+      cardBg: "#ffffff",
+      textColor: "#492705",
+      borderColor: "#efdbc7",
+      borderRadius: "20px",
+      fontFamily:"arial, sans-serif",
       shadow: "0 10px 30px rgba(0,0,0,0.2)"
     }
   ];
