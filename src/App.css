@@ -157,7 +157,7 @@ h1 {
   align-items: center;
   direction: rtl;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   padding: 1rem;
 }
 
