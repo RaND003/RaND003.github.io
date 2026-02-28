@@ -183,7 +183,8 @@ h1 {
 }
 
 .user-card {
-  position: relative;
+  /* position: relative; */
+  position: center;
   padding: 15px 20px;
   width: 70%;
   max-width: 70%;
