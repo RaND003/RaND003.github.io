@@ -162,22 +162,24 @@ h1 {
 }
 
 .user-photo {
-  position: absolute;
-  right: 0;
+  position: right center;
+  size: 50%;
+  /* right: 0;
   bottom: 0;
-  height: 100%;
+  height: 50%;
   width: auto;
-  max-width: 100%;
+  max-width: 100%; */
+  background-attachment: fixed;
   opacity: 0.9;
   z-index: 1;
-  object-fit: cover;
+  object-fit:initial;
 }
 
 .top-decoration {
   position: absolute;
   top: 10px;
   left: 10px;
-  width: 50px;
+  width: 70px;
   height: auto;
   z-index: 1;
 }
@@ -258,6 +260,7 @@ h1 {
   }
 
   .user-photo {
+    position: right center;
     right: -80px;
     height: 85%;
     width: auto;
