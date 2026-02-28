@@ -184,7 +184,7 @@ h1 {
 .user-photo {
   position: absolute;
   right: 0;
-  bottom: 150px;
+  bottom: 120px;
   height: auto;
   width: 22ch;
   max-width: 100%;
@@ -199,6 +199,7 @@ h1 {
   top: 10px;
   left: 10px;
   width: 60px;
+  size: 30% ;
   height: auto;
   z-index: 1;
   pointer-events: none;
