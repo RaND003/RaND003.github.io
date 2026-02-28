@@ -187,10 +187,10 @@ h1 {
 .user-photo {
   position: absolute;
   right: 0;
-  bottom: 100px;
+  bottom: 120px;
   height: auto;
-  width: 23ch;
-  max-width: 110%;
+  width: 22ch;
+  max-width: 100%;
   opacity: 0.9;
   z-index: 1;
   object-fit: cover;
@@ -305,9 +305,9 @@ h1 {
 
   .user-photo {
     right: 0;
-    bottom: 80px;
+    bottom: 120px;
     height: auto;
-    width: 20ch;
+    width: 22ch;
     max-width: 100%;
     opacity: 0.9;
     z-index: 1;
@@ -337,22 +337,22 @@ h1 {
     pointer-events: none;
   }
 
-  .user-card {
-    padding: 12px 15px;
-    width: 65%;
-    max-width: 65%;
-    max-height: 55vh;
-    position: relative;
-    margin-bottom: 250px;
-    text-align: center;
-    z-index: 2;
-    border: 3px solid;
-    border-radius: 20px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    line-height: 1.6;
-    flex-shrink: 0;
-  }
+ .user-card {
+  position: relative;
+  margin-bottom: 340px;
+  padding: 15px 20px;
+  width: 70%;
+  max-width: 70%;
+  max-height: 60vh;
+  text-align: center;
+  z-index: 2;
+  border: 3px solid;
+  border-radius: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  line-height: 1.6;
+  flex-shrink: 0;
+}
 
   .user-card h2 {
     font-size: 0.9rem;
