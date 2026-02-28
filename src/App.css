@@ -1,12 +1,17 @@
+/* ============================================ */
+/* GENERAL STYLES */
+/* ============================================ */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -33,6 +38,7 @@
 .read-the-docs {
   color: #a18787;
 }
+
 body {
   font-family: "Marhey", sans-serif;
 }
@@ -40,20 +46,470 @@ body {
 h1 {
   font-family: "Rakkas", cursive;
 }
-.searchInput {
-  /* background-color: #c17878; */
-  padding: 12px;
-  border-radius: 10px;
-  border: none;
-  color: white;
-  font-size: 16px;
-  width: 250px;
-}
-.startScreen {
-  height: 100vh;
-  background-color: #8bd08b;
-  /* display: flex;
+
+/* ============================================ */
+/* START SCREEN - Mobile First (320px - 767px) */
+/* ============================================ */
+.start-screen {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #ea8383;
+  background-image: url("/start.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; */
-} 
+  align-items: center;
+  direction: rtl;
+  position: relative;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.start-screen h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 250px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #ea8383;
+  box-shadow: 0 0 5px rgba(234, 131, 131, 0.3);
+}
+
+.search-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #d44c4c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #c43636;
+}
+
+.search-button:active {
+  transform: scale(0.98);
+}
+
+.error-message {
+  color: #b91c1c;
+  background: #fee2e2;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin: 0;
+  font-size: 13px;
+  text-align: center;
+  max-width: 90%;
+  border-left: 4px solid #b91c1c;
+}
+
+.start-decoration {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  height: auto;
+}
+
+/* ============================================ */
+/* USER SCREEN - Mobile First (320px - 767px) */
+/* ============================================ */
+.user-screen {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  direction: rtl;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.user-photo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  opacity: 0.9;
+  z-index: 1;
+  object-fit: cover;
+}
+
+.top-decoration {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: auto;
+  z-index: 1;
+}
+
+.bottom-decoration {
+  position: absolute;
+  bottom: -30px;
+  left: -50px;
+  width: 35%;
+  opacity: 0.2;
+  z-index: 1;
+  height: auto;
+}
+
+.user-card {
+  position: relative;
+  padding: 15px 20px;
+  width: 70%;
+  max-width: 70%;
+  max-height: 60vh;
+  text-align: center;
+  z-index: 2;
+  border: 3px solid;
+  border-radius: 20px;
+  overflow-y: auto;
+  margin-left: auto;
+  margin-right: 0;
+  line-height: 1.6;
+}
+
+.user-card h2 {
+  font-size: 1rem;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* ============================================ */
+/* TABLET SCREENS (min-width: 768px) */
+/* ============================================ */
+@media (min-width: 768px) {
+  /* START SCREEN - TABLET */
+  .start-screen {
+    background-size: 50%;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+
+  .start-screen h1 {
+    font-size: 2rem;
+  }
+
+  .search-input {
+    font-size: 16px;
+    padding: 12px;
+    width: 250px;
+  }
+
+  .search-button {
+    padding: 12px 30px;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .error-message {
+    font-size: 15px;
+    padding: 12px 18px;
+  }
+
+  .start-decoration {
+    width: 100px;
+    top: 20px;
+    left: 20px;
+  }
+
+  /* USER SCREEN - TABLET */
+  .user-screen {
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .user-photo {
+    right: -80px;
+    height: 85%;
+    width: auto;
+  }
+
+  .top-decoration {
+    width: 80px;
+    top: 20px;
+    left: 20px;
+  }
+
+  .bottom-decoration {
+    width: 35%;
+    bottom: -60px;
+    left: -80px;
+  }
+
+  .user-card {
+    padding: 25px 30px;
+    width: 80%;
+    max-width: 500px;
+    max-height: 70vh;
+  }
+
+  .user-card h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* ============================================ */
+/* DESKTOP SCREENS (min-width: 1024px) */
+/* ============================================ */
+@media (min-width: 1024px) {
+  /* START SCREEN - DESKTOP */
+  .start-screen {
+    background-size: auto;
+    padding: 3rem;
+    gap: 2rem;
+  }
+
+  .start-screen h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .search-input {
+    font-size: 16px;
+    padding: 12px;
+    width: 280px;
+  }
+
+  .search-button {
+    padding: 12px 35px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .error-message {
+    font-size: 16px;
+    padding: 15px 20px;
+    max-width: 500px;
+  }
+
+  .start-decoration {
+    width: 120px;
+    top: 30px;
+    left: 30px;
+  }
+
+  /* USER SCREEN - DESKTOP */
+  .user-screen {
+    justify-content: center;
+    padding: 3rem;
+  }
+
+  .user-photo {
+    right: -100px;
+    height: 90%;
+    width: auto;
+  }
+
+  .top-decoration {
+    width: 120px;
+    top: 30px;
+    left: 30px;
+  }
+
+  .bottom-decoration {
+    width: 35%;
+    bottom: -70px;
+    left: -100px;
+  }
+
+  .user-card {
+    padding: 40px 50px;
+    width: 500px;
+    max-width: 500px;
+    max-height: 75vh;
+  }
+
+  .user-card h2 {
+    font-size: 1.5rem;
+    line-height: 1.8;
+  }
+}
+
+/* ============================================ */
+/* LARGE DESKTOP (min-width: 1440px) */
+/* ============================================ */
+@media (min-width: 1440px) {
+  /* START SCREEN - LARGE DESKTOP */
+  .start-screen {
+    padding: 4rem;
+  }
+
+  .start-screen h1 {
+    font-size: 3rem;
+  }
+
+  .search-input {
+    width: 300px;
+  }
+
+  .start-decoration {
+    width: 140px;
+  }
+
+  /* USER SCREEN - LARGE DESKTOP */
+  .user-screen {
+    padding: 4rem;
+  }
+
+  .user-card {
+    padding: 50px 60px;
+    max-height: 80vh;
+  }
+
+  .user-card h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ============================================ */
+/* EXTRA SMALL PHONES (max-width: 480px) */
+/* ============================================ */
+@media (max-width: 480px) {
+  .start-screen h1 {
+    font-size: 1.3rem;
+  }
+
+  .search-input {
+    font-size: 14px;
+    padding: 8px;
+    width: 90%;
+  }
+
+  .search-button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .error-message {
+    font-size: 12px;
+    padding: 8px 12px;
+    width: 85%;
+  }
+
+  .start-decoration {
+    width: 45px;
+    top: 8px;
+    left: 8px;
+  }
+
+  .user-screen {
+    padding: 0.5rem;
+  }
+
+  .user-photo {
+    right: 0;
+  }
+
+  .top-decoration {
+    width: 40px;
+    top: 8px;
+    left: 8px;
+  }
+
+  .bottom-decoration {
+    width: 40%;
+    bottom: -20px;
+    left: -30px;
+  }
+
+  .user-card {
+    padding: 12px 15px;
+    width: 65%;
+    max-height: 55vh;
+  }
+
+  .user-card h2 {
+    font-size: 0.9rem;
+  }
+}
+
+/* ============================================ */
+/* LANDSCAPE MODE */
+/* ============================================ */
+@media (max-height: 600px) and (orientation: landscape) {
+  .start-screen {
+    min-height: auto;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .start-screen h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .search-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .user-card {
+    max-height: 85vh;
+    padding: 15px 25px;
+  }
+
+  .user-card h2 {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================ */
+/* TOUCH DEVICE IMPROVEMENTS */
+/* ============================================ */
+@media (hover: none) and (pointer: coarse) {
+  .search-button {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+
+  .search-input {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+/* ============================================ */
+/* PRINT STYLES */
+/* ============================================ */
+@media print {
+  .search-button,
+  .search-input,
+  .error-message {
+    display: none;
+  }
+
+  .user-card {
+    page-break-inside: avoid;
+  }
+}
