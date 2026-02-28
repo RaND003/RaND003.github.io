@@ -184,8 +184,8 @@ h1 {
 .user-photo {
   position: absolute;
   right: 0;
-  bottom: -30px;
-  height: 60%;
+  bottom: -20px;
+  height: auto;
   width: 22ch;
   max-width: 100%;
   opacity: 0.9;
@@ -217,7 +217,7 @@ h1 {
 
 .user-card {
   position: relative;
-  margin-bottom: 240px;
+  margin-bottom: 340px;
   padding: 15px 20px;
   width: 70%;
   max-width: 70%;
