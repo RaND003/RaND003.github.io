@@ -163,16 +163,14 @@ h1 {
 
 .user-photo {
   position: right center;
-  size: 50%;
-  /* right: 0;
+  right: 0;
   bottom: 0;
   height: 50%;
   width: auto;
-  max-width: 100%; */
-  background-attachment: fixed;
+  max-width: 100%;
   opacity: 0.9;
   z-index: 1;
-  object-fit:initial;
+  object-fit: contain;
 }
 
 .top-decoration {
