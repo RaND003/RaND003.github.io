@@ -184,7 +184,7 @@ h1 {
 .user-photo {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -30px;
   height: 80%;
   width: auto;
   max-width: 100%;
