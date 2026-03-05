@@ -112,7 +112,22 @@ export default function App() {
       borderRadius: "20px",
       fontFamily:"arial, sans-serif",
       shadow: "0 10px 30px rgba(0,0,0,0.2)"
-    }
+    },
+    {
+      name: "لين",
+      message:"ليونييي،  عيدك مباركك يا حلو، أول سبب خلاني أتابعك اللهجة بس طلعتي مخلوق عسول بنملش أحكي معه، الله يسعدك ويوفقك، استمتعي بيومك حبي      ༼ つ ◕_◕ ༽つ",
+      photo: "/jeonghan.png",
+      secondImage: "/jeonghan3.png",
+      thirdImage: "/arr4.png",
+      bg: "#8FBC8F",
+
+      cardBg: "#ffffff",
+      textColor: "#0e2b02",
+      borderColor: "#d9f0d7",
+      borderRadius: "20px",
+      fontFamily:"arial, sans-serif",
+      shadow: "0 10px 30px rgba(0,0,0,0.2)"
+    },
   ];
 
   // Handle window resize for responsive behavior
