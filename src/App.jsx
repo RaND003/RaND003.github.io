@@ -158,6 +158,21 @@ export default function App() {
       fontFamily:"arial, sans-serif",
       shadow: "0 10px 30px rgba(0,0,0,0.2)"
     },
+    {
+      name: "سنا",
+      message:"سنسنسن، عيدكك مباركك يحلوو، مشتاقتلك كثير وبحب لما أشوفك مبسوطة بالتايملاين، الله يسعدك دايما وييسر أمرك ونشوفك أحلى عروس عخير، استمتعي بيومك (❁´◡`❁)",
+      photo: "/pedri.png",
+      secondImage: "/ste.png",
+      thirdImage: "/arr4.png",
+      bg: "#B261B2",
+
+      cardBg: "#ffffff",
+      textColor: "#3c003a",
+      borderColor: "#e3d2e6",
+      borderRadius: "20px",
+      fontFamily:"arial, sans-serif",
+      shadow: "0 10px 30px rgba(0,0,0,0.2)"
+    },
 
   ];
 
