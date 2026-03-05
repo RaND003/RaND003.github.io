@@ -145,7 +145,7 @@ export default function App() {
     },
   ];
 
-  // Handle window resize for responsive behavior
+  // Handle window resize for responsive 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
