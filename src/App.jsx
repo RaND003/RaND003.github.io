@@ -143,6 +143,22 @@ export default function App() {
       fontFamily:"arial, sans-serif",
       shadow: "0 10px 30px rgba(0,0,0,0.2)"
     },
+    {
+      name: "رسيل",
+      message:"رزاي رسيل حبيبي البني، عيدك مباركك حبي، بتعرفيش كديش بحبك، كد ما بتمر فترات بننقطع عن بعض، بس مجرد ما أحكي معك بحس فش وقت مر، وجودك وتعرفي عليك من النقاط المهمة الي بحسها بتعرف حياتي بهذيك الفترة، الله يسعدك ويوفقك وييسر أمرك ويرضيك، بحبك كثير كثير، استمتعي بيومك يقمر (✿◠‿◠)",
+      photo: "/dazai3.png",
+      secondImage: "/book2.png",
+      thirdImage: "/arr4.png",
+      bg: "#A0522D",
+
+      cardBg: "#ffffff",
+      textColor: "#3c2100",
+      borderColor: "#e6dcd2",
+      borderRadius: "20px",
+      fontFamily:"arial, sans-serif",
+      shadow: "0 10px 30px rgba(0,0,0,0.2)"
+    },
+
   ];
 
   // Handle window resize for responsive 
