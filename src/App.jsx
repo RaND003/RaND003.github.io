@@ -222,7 +222,7 @@ export default function App() {
       name: "هيو",
       message:"هيوو صديقي الأول بالموقع، عيدك مبارك يحلوو، مشتاقة لك كثيير، بتعرفيش كم مبسوطتلك لما أشوفك بالتابملاين هالفترة، إن شاء الله دايماً سعيدة وراضية، الله يوفقك وييسر أمرك، استمتعي بيومك                      ⪩. .⪨",
       photo: "/horse2.png",
-      secondImage: "/cow2.png",
+      secondImage: "/cow4.png",
       thirdImage: "/arr4.png",
       bg: "#FFEE97",
 
