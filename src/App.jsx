@@ -132,7 +132,7 @@ export default function App() {
       name: "ملك",
       message:"ملوكك، عيدك مبارك يا حلوو، وجودك بالتايملاين متعة لا تقطعي علينا كثير، الله يوفقك ويسعدك، استمتعي بيومكك~(￣▽￣)~*",
       photo: "/kwan7.png",
-      secondImage: "/blue.png",
+      secondImage: "/cro2.png",
       thirdImage: "/arr4.png",
       bg: "#FFFACD",
 
