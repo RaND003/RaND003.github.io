@@ -277,6 +277,20 @@ export default function App() {
       borderRadius: "20px",
       fontFamily:"arial, sans-serif",
       shadow: "0 10px 30px rgba(0,0,0,0.2)"
+    },{
+      name: "رواسي",
+      message:"ماما روري حبيب قلبي، عيدك مباركك يا عسل، تعرفي عليك من الذكريات الي مستحيل أنساها، إن كان من فترة أو طريقة، بحبك كثيير كثيير ومبسوطتلك من قلبي لكل شي بصير لك، الله يحفظلك نورة ويقر عيونك فيها، والله يسعدك ويرضيك، استمتعي بيومكك ◝(ᵔᗜᵔ)◜",
+      photo: "/stars2.png",
+      secondImage: "/star2.png",
+      thirdImage: "/arr4.png",
+      bg: "#F0E68C",
+
+      cardBg: "#ffffff",
+      textColor: "#4b4a05",
+      borderColor: "#eef4cf",
+      borderRadius: "20px",
+      fontFamily:"arial, sans-serif",
+      shadow: "0 10px 30px rgba(0,0,0,0.2)"
     },
 
   ];
