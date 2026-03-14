@@ -448,6 +448,20 @@ export default function App() {
       borderRadius: "20px",
       fontFamily:"arial, sans-serif",
       shadow: "0 10px 30px rgba(0,0,0,0.2)"
+    },{
+      name: "آية",
+      message:"عيدك مبارك آيوش ㄟ(≧◇≦)ㄏ",
+      photo: "/paw.png",
+      secondImage: "/grass.png",
+      thirdImage: "/arr4.png",
+      bg: "#FFB6C1",
+
+      cardBg: "#ffffff",
+      textColor: "#210209",
+      borderColor: "#f8d9e0",
+      borderRadius: "20px",
+      fontFamily:"arial, sans-serif",
+      shadow: "0 10px 30px rgba(0,0,0,0.2)"
     },
     
 
