@@ -334,6 +334,21 @@ export default function App() {
       fontFamily:"arial, sans-serif",
       shadow: "0 10px 30px rgba(0,0,0,0.2)"
     },
+    {
+      name: "شيما",
+      message:"شمشوميي، عيدكك مباركك حبيي، بحبكك كثير وبحب الحكي والكعدة معك، الله يسعدك ويوفقك ويرضيك، استمتعي بيومك (✿◡‿◡)",
+      photo: "/travel.png",
+      secondImage: "/sunset.png",
+      thirdImage: "/arr4.png",
+      bg: "#87CEEB",
+
+      cardBg: "#ffffff",
+      textColor: "#021921",
+      borderColor: "#d9eef8",
+      borderRadius: "20px",
+      fontFamily:"arial, sans-serif",
+      shadow: "0 10px 30px rgba(0,0,0,0.2)"
+    },
 
   ];
 
