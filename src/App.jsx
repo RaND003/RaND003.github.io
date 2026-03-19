@@ -380,7 +380,7 @@ export default function App() {
       shadow: "0 10px 30px rgba(0,0,0,0.2)"
     },{
       name: "ميما",
-      message:"عيدك مباركك ميما(✿◠‿◠)",
+      message:"عيدك مباركك ميما، تقبل الله طاعاتكم(✿◠‿◠)",
       photo: "/flowers4.png",
       secondImage: "/coffe4.png",
       thirdImage: "/arr4.png",
@@ -394,7 +394,7 @@ export default function App() {
       shadow: "0 10px 30px rgba(0,0,0,0.2)"
     },{
       name: "لميس",
-      message:"عيدك مبارك خالتيي(✿◠‿◠)", 
+      message:"عيدك مبارك خالتيي،  تقبل الله طاعاتكم(✿◠‿◠)",
       photo: "/flowers6.png",
       secondImage: "/coffe5.png",
       thirdImage: "/arr4.png",
@@ -408,7 +408,7 @@ export default function App() {
       shadow: "0 10px 30px rgba(0,0,0,0.2)"
     },{
       name: "خزامى",
-      message:"عيدكك مباركك خزامى (˶>⩊<˶)",
+      message:"عيدكك مباركك خزامى،  تقبل الله طاعاتكم(˶>⩊<˶)",
       photo: "/lave.png",
       secondImage: "/lav.png",
       thirdImage: "/arr4.png",
@@ -422,7 +422,7 @@ export default function App() {
       shadow: "0 10px 30px rgba(0,0,0,0.2)"
     },{
       name: "بشرى",
-      message:"عيدكك مبارك خالتيي(˶ᵔ ᵕ ᵔ˶)",
+      message:"عيدكك مبارك خالتيي،  تقبل الله طاعاتكم(˶ᵔ ᵕ ᵔ˶)",
       photo: "/flowers5.png",
       secondImage: "/smsm2.png",
       thirdImage: "/arr4.png",
@@ -436,7 +436,7 @@ export default function App() {
       shadow: "0 10px 30px rgba(0,0,0,0.2)"
     },{
       name: "ورود",
-      message:"عيدكك مباركك خالتيي (๑>◡<๑)",
+      message:"عيدكك مباركك خالتيي،  تقبل الله طاعاتكم(๑>◡<๑)",
       photo: "/flowers7.png",
       secondImage: "/wo.png",
       thirdImage: "/arr4.png",
@@ -450,7 +450,7 @@ export default function App() {
       shadow: "0 10px 30px rgba(0,0,0,0.2)"
     },{
       name: "آية",
-      message:"عيدك مبارك آيوش ㄟ(≧◇≦)ㄏ",
+      message:"  عيدك مبارك آيوش،  تقبل الله طاعاتكم ㄟ(≧◇≦)ㄏ",
       photo: "/paw.png",
       secondImage: "/tree.png",
       thirdImage: "/arr4.png",
@@ -465,7 +465,7 @@ export default function App() {
     },
     {
       name: "توحيد",
-      message:"عيدك مبارك توحيدةة، استمتعي بيومكك ꉂ(˵˃ ᗜ ˂˵)",
+      message:"عيدك مبارك توحيدةة، تقبل الله طاعاتكم، استمتعي بيومكك ꉂ(˵˃ ᗜ ˂˵)",
       photo: "/travel3.png",
       secondImage: "/teeth.png",
       thirdImage: "/arr4.png",
